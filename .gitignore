@@ -1,0 +1,12 @@
+# Claves y configuración local (no subir nunca)
+config.php
+.env
+*.env
+
+# Copias de la base de datos con datos reales
+*.sql.bak
+
+# Sistema y editor
+.DS_Store
+Thumbs.db
+.vscode/
