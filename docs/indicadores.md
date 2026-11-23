@@ -1,14 +1,18 @@
-# Indicadores de seguimiento
+# Indicadores de calidad
 
-Los valores se rellenan en la revisión semanal de los domingos. De momento no hay ningún dato real.
+Salen de los requisitos de la Fase 2. Todavía no hay ninguna medición: la columna «Valor medido» se rellena al hacer cada comprobación.
 
-| Indicador | Cómo se calcula | Objetivo | Valor actual |
-|-----------|-----------------|----------|--------------|
-| Tareas terminadas | Tareas en «Hecho» / 15 | 100 % al final | 0 de 15 |
-| Horas usadas | Horas reales frente a las 111 h previstas | No pasar de 111 h + margen | Sin datos |
-| Desviación del plazo | Días de retraso sobre el cronograma | 0 días (margen 8-14/02/2027) | Sin datos |
-| Funcionalidades esenciales | Las que pasan sus pruebas / 9 | 9 de 9 | 0 de 9 |
-| Pruebas superadas | Pruebas superadas / pruebas ejecutadas | Más del 90 % | Sin datos |
-| Incidencias abiertas | Incidencias críticas y altas sin cerrar | 0 al entregar | 0 |
-| Accesibilidad | Pruebas P14 superadas | Superada | Pendiente |
-| Rendimiento | Tiempo de carga de la disponibilidad | Menos de 2 s | Pendiente |
+| Indicador | Qué controla | Cómo se comprobará | Resultado aceptable | Cuándo | Valor medido |
+|-----------|--------------|--------------------|---------------------|--------|--------------|
+| Funcionalidades esenciales comprobadas | Cumplimiento de los requisitos funcionales | Cuento cuántas de las 9 funcionalidades esenciales del alcance tienen su prueba superada en el registro | 9 de 9 superadas antes de publicar | Cada domingo y antes de publicar (T14) | |
+| Reservas solapadas | Que no se reserve una pista ocupada | Registro dos reservas para la misma pista, fecha y franja | La segunda se rechaza y un mensaje explica el conflicto | Al terminar las reservas y en T13 | |
+| Reservas fuera de las reglas | Horario del club, máximo de reservas y plazo de cancelación | Intento reservar fuera del horario, superar el máximo por jugador y cancelar fuera de plazo | Las tres operaciones se rechazan con un mensaje claro | Al terminar las reglas del club y en T13 | |
+| Aforo y nivel de las clases | Que no se apunte más gente de la permitida ni de otro nivel | Lleno una clase e intento apuntar a un jugador más, y a otro de un nivel distinto | Ambos intentos se rechazan y se avisa del motivo | Al terminar las inscripciones a clases | |
+| Validación de formularios | Que no entren datos incorrectos | Envío cada formulario vacío, con una fecha no válida y con un correo mal escrito | No se guarda nada y se indica qué campo falla | Al terminar cada formulario | |
+| Control de acceso por rol | Que cada usuario solo haga lo suyo | Con la sesión de jugador pido una página de la coordinadora; con la del profesor intento modificar una reserva | El servidor rechaza la petición, no solo se esconde el botón | Al terminar el inicio de sesión y en T13 | |
+| Contraseñas protegidas | Seguridad de los datos de acceso | Reviso la tabla de usuarios en phpMyAdmin | Ninguna contraseña aparece en texto legible | Al terminar el registro | |
+| Integridad de los datos | Datos coherentes tras operar | Cancelo una reserva y una baja de clase y reviso la base de datos | El hueco o la plaza queda libre, no quedan registros a medias y la base de datos impide dos reservas iguales | Al terminar cancelaciones y en T13 | |
+| Adaptación a móvil | Uso correcto en pantalla pequeña | Abro las pantallas principales a 375 px de ancho | Todo se ve y se usa sin desplazarse hacia los lados | Al terminar cada pantalla y antes de publicar | |
+| Accesibilidad básica | Contraste y etiquetas | Compruebo que cada campo tenga su etiqueta y mido el contraste de los textos con una herramienta del navegador | Todos los campos con etiqueta y contraste suficiente en los textos principales | Al terminar la interfaz y antes de publicar | |
+| Rendimiento de la disponibilidad | Rapidez de la consulta de huecos libres | Cronometro la consulta de un día con los datos de prueba | Menos de 3 segundos | En T13 | |
+| Hitos y errores críticos | Cumplimiento del cronograma y estabilidad | Comparo el tablero con el cronograma y cuento las incidencias graves abiertas | Cada hito en su semana (o dentro del margen de febrero) y 0 incidencias graves abiertas al publicar | Cada domingo y antes de publicar (T14) | |
