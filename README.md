@@ -28,7 +28,7 @@ HTML, CSS y JavaScript con Bootstrap en la parte que ve el usuario, PHP en el se
 
 ## Estado actual
 
-**Fase 3: planificación de la ejecución.** El proyecto está en fase de planificación y todavía no hay código de la aplicación. Ya están hechos el análisis de la necesidad, el diseño y estudio de viabilidad, y el plan de ejecución.
+**Fase 4A: plan de seguimiento y control.** El proyecto sigue en fase de planificación y todavía no hay código de la aplicación. Ya están hechos el análisis de la necesidad, el diseño y estudio de viabilidad, el plan de ejecución y el plan de seguimiento. El estado de las tareas se ve en el [tablero de seguimiento](https://github.com/users/miriancp88/projects/1).
 
 ## Documentación
 
@@ -42,6 +42,12 @@ Toda la documentación está en la carpeta [`docs/`](docs/):
 - [Recursos](docs/recursos.md).
 - [Decisiones del proyecto](docs/decisiones.md).
 - [Seguimiento semanal](docs/seguimiento.md).
+- [Plan de pruebas](docs/pruebas.md) y carpeta de [evidencias](docs/evidencias/).
+- [Indicadores de calidad](docs/indicadores.md).
+- [Registro de cambios](docs/cambios.md).
+- [Evaluación con usuarios](docs/usuarios.md).
+- [Matriz de aceptación](docs/requisitos.md).
+- Plantilla de incidencias: [.github/ISSUE_TEMPLATE/incidencia.md](.github/ISSUE_TEMPLATE/incidencia.md).
 
 ## Estructura del repositorio
 
@@ -49,7 +55,8 @@ Toda la documentación está en la carpeta [`docs/`](docs/):
 reservas-club-padel/
 ├── README.md        Descripción del proyecto
 ├── .gitignore
-└── docs/            Documentación (plan y cronograma, riesgos, permisos, documentación técnica, recursos, decisiones, seguimiento)
+├── .github/         Plantilla de incidencias
+└── docs/            Documentación (plan y cronograma, riesgos, permisos, documentación técnica, recursos, decisiones, seguimiento, pruebas, indicadores, cambios, usuarios, requisitos y evidencias)
 ```
 
 El código se añadirá en carpetas nuevas (por ejemplo `src/` y `sql/`) durante el desarrollo y se anotará aquí.
